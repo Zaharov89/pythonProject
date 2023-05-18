@@ -1,35 +1,34 @@
-def cons1():
+def consA():
     return 1
-def cons2():
+def consB():
     return 2
-def cons3():
+def consC():
     return 3
-def cons4():
+def consD():
     return 4
-def cons5():
+def consE():
     return 5
-def cons6():
+def consF():
     return 6
-def cons7():
+def consG():
     return 7
-def cons8():
+def consH():
     return 8
-def cons9():
+def consI():
     return 9
-def cons0():
+def consJ():
     return 0
-
-a = cons1()
-b = cons2()
-c = cons3()
-d = cons4()
-e = cons5()
-f = cons6()
-g = cons7()
-h = cons8()
-i = cons9()
-j = cons0()
 
 #88005553535
 
-print(h, h, j, j, e, e, e, c, e, c, e)
+print(consH())
+consH()
+consJ()
+consJ()
+consE()
+consE()
+consE()
+consC()
+consE()
+consC()
+consE()
