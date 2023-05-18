@@ -1,34 +1,33 @@
-def consA():
-    return 1
-def consB():
-    return 2
-def consC():
-    return 3
-def consD():
-    return 4
-def consE():
-    return 5
-def consF():
-    return 6
-def consG():
-    return 7
-def consH():
-    return 8
-def consI():
-    return 9
-def consJ():
-    return 0
+def funcA():
+    print(1)
+def funcB():
+    print(2)
+def funcC():
+    print(3)
+def funcD():
+    print(4)
+def funcE():
+    print(5)
+def funcF():
+    print(6)
+def funcG():
+    print(7)
+def funcH():
+    print(8)
+def funcI():
+    print(9)
+def funcJ():
+    print(0)
+# последовательность цифр = 88005553535
 
-#88005553535
-
-print(consH())
-consH()
-consJ()
-consJ()
-consE()
-consE()
-consE()
-consC()
-consE()
-consC()
-consE()
+funcH()
+funcH()
+funcJ()
+funcJ()
+funcE()
+funcE()
+funcE()
+funcC()
+funcE()
+funcC()
+funcE()
