@@ -1,15 +1,13 @@
-year = input("Введите год:")
-year2 = int(year)
-def is_year_leap(year2):
-    if (year2 % 4 == 0):
-        print(True)
+year = int(input("Введите год:"))
+def is_year_leap(year):
+    if (year % 4 == 0):
+        return True
     else:
-        print(False)
+        return False
 
-year3 = is_year_leap(year2)
-print(year3)
+year2 = is_year_leap(year)
 
-if (year3 == True):
+if (year2 == True):
     print("год", year,":", "True")
 else:
     print("год", year,":", "False")
