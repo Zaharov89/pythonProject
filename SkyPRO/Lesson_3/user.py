@@ -4,11 +4,11 @@ class User:
         self.first_name = first_name
         self.last_name = last_name
 
-    def sayfName (self):
+    def say_f_Name(self):
         print(self.first_name)
 
-    def saylName (self):
+    def say_l_Name(self):
         print(self.last_name)
 
-    def sayf_l_Name (self):
+    def say_f_l_Name(self):
         print(self.first_name, self.last_name)
