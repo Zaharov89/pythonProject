@@ -1,5 +1,4 @@
 from SkyPRO.Lesson_3.mailing import Mailing
-from SkyPRO.Lesson_3.address import Address
 
 
 #my_mailing = (
