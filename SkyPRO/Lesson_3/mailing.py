@@ -3,7 +3,9 @@ from SkyPRO.Lesson_3.address import Address
 
 class Mailing:
 
-    def __init__(self, cost, track):
+    def __init__(self, add_from, add_to, cost, track):
+        self.add_from = add_from
+        self.add_to = add_to
         self.cost = int(cost)
         self.track = str(track)
 

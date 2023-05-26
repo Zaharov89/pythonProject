@@ -7,6 +7,8 @@ from SkyPRO.Lesson_3.address import Address
 #mailing.say_cost(), "рублей.")
 
 
-my_mailing = Mailing("325745", "Магадан", "Перова", "22", "55", "351345", "Москва", "Ленина", "34", "11", 123, "123")
+my_mailing = Mailing(("325745", "Магадан", "Перова", "22", "55"), ("351345", "Москва", "Ленина", "34", "11"), 123, "123")
 
 print(my_mailing)
+
+
