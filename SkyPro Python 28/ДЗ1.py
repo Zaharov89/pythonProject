@@ -25,7 +25,6 @@ else:
     print("""Неправильно.
 Правильный ответ: is""")
 
-
 print("I ___ a coder")
 
 answer_2 = input()
@@ -52,40 +51,34 @@ else:
     print("""Неправильно.
 Правильный ответ: in""")
 
-
-percent = 100 * all_answer / 3            #Считаем проценты
-percent_round = round(percent)            #Округляем проценты
+percent = round(100 * all_answer / 3)  #Считаем проценты
 
 #Изменяем окончания у слов в последнем сообщении для обучающегося
-
-stile_answer = all_answer
-
-if stile_answer == 1:
-    print("вопрос")
-elif 2 <= stile_answer <= 4:
-    print("вопроса")
+questions_ending = ""
+if all_answer == 1:
+    questions_ending = "вопрос"
+elif 2 <= all_answer <= 4:
+    questions_ending = "вопроса"
 else:
-    print("вопросов")
+    questions_ending = "вопросов"
 
-stile_number = number
-
-if stile_number == (1, 21):
-    print("балл")
-elif stile_number == (2, 3, 4, 22, 23, 24):
-    print("балла")
+scores_ending = ""
+if number in (1, 21):
+    scores_ending = "балл"
+elif number in (2, 3, 4, 22, 23, 24):
+    scores_ending = "балла"
 else:
-    print("баллов")
+    scores_ending = "баллов"
 
-stile_percent = percent_round
-
-if stile_percent == (1, 21, 31, 41, 51, 61, 71, 81, 91):
-    print("процент")
-elif stile_answer == (2, 3, 4, 22, 23, 24, 32, 33, 34, 42, 43, 44, 52, 53, 54, 62, 63, 64, 72, 73, 74, 82, 83, 84, 92, 93, 94):
-    print("процента")
+percent_ending = ""
+if percent in (1, 21, 31, 41, 51, 61, 71, 81, 91):
+    percent_ending = "процент"
+elif percent in (2, 3, 4, 22, 23, 24, 32, 33, 34, 42, 43, 44, 52, 53, 54, 62, 63, 64, 72, 73, 74, 82, 83, 84, 92, 93, 94):
+    percent_ending = "процента"
 else:
-    print("процентов")
+    percent_ending = "процентов"
 
 print(f"""Вот и все, {name}! 
-Вы ответили на {all_answer} {stile_answer} из 3 верно.
-Вы заработали {number} {stile_number}.
-Это {percent_round} {stile_percent}.""")
+Вы ответили на {all_answer} {questions_ending} из 3 верно.
+Вы заработали {number} {scores_ending}.
+Это {percent} {percent_ending}.""")
