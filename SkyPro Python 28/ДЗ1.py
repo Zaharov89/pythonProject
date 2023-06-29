@@ -49,8 +49,9 @@ else:
 Правильный ответ: in""")
 
 percent = 100 * all_answer / 3
+percent_round = round(percent)
 
 print(f"""Вот и все, {name}! 
 Вы ответили на {all_answer} вопросов из 3 верно.
 Вы заработали {number} баллов.
-Это {percent} процентов.""")
+Это {percent_round} процентов.""")
