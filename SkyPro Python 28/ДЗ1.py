@@ -5,8 +5,12 @@ name = input()
 
 print(f'Привет, {name}, начинаем тренировку!')
 
+#Начинаем отсчет баллов и правильных ответов
+
 number = 0
 all_answer = 0
+
+#Начинаем задания
 
 print("My name ___ Vova")
 
@@ -48,8 +52,11 @@ else:
     print("""Неправильно.
 Правильный ответ: in""")
 
-percent = 100 * all_answer / 3
-percent_round = round(percent)
+
+percent = 100 * all_answer / 3            #Считаем проценты
+percent_round = round(percent)            #Округляем проценты
+
+#Изменяем окончания у слов в последнем сообщении для обучающегося
 
 stile_answer = all_answer
 
