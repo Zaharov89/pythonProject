@@ -24,10 +24,10 @@ else:                                                      # Начинаем з
                 all_ball += attempt
             elif user_answer != answers[i]:
                 print('Осталось попыток: 2, попробуйте еще раз!')
-                all_ball -= 1
+                all_ball = attempt - 1
             elif user_answer != answers[i]:
                 print('Осталось попыток: 1, попробуйте еще раз!')
-                all_ball -= 1
+                all_ball = attempt - 1
             else:
                 print(f'Увы, но нет. Верный ответ: {answers[i]}')
 
