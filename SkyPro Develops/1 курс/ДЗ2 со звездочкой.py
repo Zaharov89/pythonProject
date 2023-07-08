@@ -17,7 +17,6 @@ else:                                                      # Начинаем з
         print(questions[i])
         attempt = 3
         while attempt > 0:
-#            print(questions[i])
             user_answer = input()
             if user_answer == answers[i]:
                 print('Ответ верный!')
