@@ -16,22 +16,23 @@ else:                                                      # Начинаем з
     for i in range(len(questions)):
         print(questions[i])
         attempt = 3
-        while attempt > 3:                                 # Составление цикла из 3 попыток ответов + начисление баллов за верные ответы
+        while attempt > 0:
+#            print(questions[i])
             user_answer = input()
             if user_answer == answers[i]:
                 print('Ответ верный!')
                 all_correct_answer += 1
                 all_ball += attempt
-            elif user_answer != answers[i]:
-                print('Осталось попыток: 2, попробуйте еще раз!')
-                all_ball = attempt - 1
-            elif user_answer != answers[i]:
-                print('Осталось попыток: 1, попробуйте еще раз!')
-                all_ball = attempt - 1
             else:
-                print(f'Увы, но нет. Верный ответ: {answers[i]}')
+                attempt -= 1
+                if user_answer != answers[i] and attempt != 0:
+                    print(f'Неверно. Осталось попыток: {attempt}, попробуйте еще раз!')
+                else:
+                    print(f'Увы, но нет. Верный ответ: {answers[i]}')
 
-        print(f'Вот и все! Вы ответили на {all_correct_answer} вопросов из {len(answers)} верно, вы набрали {all_ball} баллов')
+    print(f'Вот и все! Вы ответили на {all_correct_answer} вопросов из {len(answers)} верно, вы набрали {all_ball} баллов')
+
+
 
 
 
