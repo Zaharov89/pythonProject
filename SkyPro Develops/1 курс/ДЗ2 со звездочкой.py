@@ -22,6 +22,7 @@ else:                                                      # Начинаем з
                 print('Ответ верный!')
                 all_correct_answer += 1
                 all_ball += attempt
+                break
             else:
                 attempt -= 1
                 if user_answer != answers[i] and attempt != 0:
