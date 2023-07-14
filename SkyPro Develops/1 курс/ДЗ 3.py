@@ -33,7 +33,7 @@ levels = {
 
 answers = {}
 
-words_level = {'Лёгкий': words_easy,'Средний': words_medium,'Тяжелый': words_hard}    # Создаем словарь с разными уровнями
+words_level = {'Легкий': words_easy,'Средний': words_medium,'Тяжелый': words_hard}    # Создаем словарь с разными уровнями
 
 words = input('Введите уровень сложности словаря: ')                                  # Пользователь вводит желаемый уровень
 
@@ -41,12 +41,12 @@ point = words_level[words]                                                      
 
 for key, values in point.items():                                                     # Создаем цикл выбранного словаря с ключом и значением
     # Программа: divide, 9 букв, начинается на р...
-    user_answer = input(f'{key}, {len(values)} букв, начинается на {values[0]}')
+    user_answer = input(f'{key}, {len(values)} букв, начинается на {values[0]}: ')
     if user_answer == values:
-        answers[user_answer] = True
+        answers[key] = True
         print(f'Верно, {key} — это {values}.')
     else:
-        answers[user_answer] = False
+        answers[key] = False
         print(f'Неверно. {key} — это {values}.')
 
 # Когда слова закончились, выведите в зависимости от результата:
