@@ -1,20 +1,114 @@
-from turtle import *
+import turtle
 
-my_turtle = Turtle()
-my_turtle.speed(0)
-my_turtle.screen.setup(1200, 800)
+# Основные цвета для персонажа
+BODY_COLOR = 'red'
+GLASS_COLOR = 'skyblue'
 
-# Нарисовать квадрат
-def draw_rect(t):
-    for x in range(0, 4):
-        t.right(90)
-        t.forward(100)
+# Главный объект
+t = turtle.Turtle()
 
-# Рисует квадраты в цикле
-for x in range(0, 360):
-    draw_rect(my_turtle)
-    my_turtle.right(1)
 
-# Необходимо, чтобы окно не закрывалось само, а только по клику
-my_turtle.screen.exitonclick()
-my_turtle.screen.mainloop()
+# Метод для рисования тела
+def body():
+	t.pensize(15) # Размер кисти
+
+	t.fillcolor(BODY_COLOR) # Цвет заполнения
+	t.begin_fill()
+
+	# Сторона справа
+	t.right(90)
+	t.forward(50)
+	t.right(180)
+	t.circle(40, -180)
+	t.right(180)
+	t.forward(200)
+
+	# Голова
+	t.right(180)
+	t.circle(100, -180)
+
+	# Сторона слева
+	t.backward(20)
+	t.left(15)
+	t.circle(500, -20)
+	t.backward(20)
+
+	t.circle(40, -180)
+	t.left(7)
+	t.backward(50)
+
+	t.up()
+	t.left(90)
+	t.forward(10)
+	t.right(90)
+	t.down()
+
+	t.right(240)
+	t.circle(50, -70)
+
+	t.end_fill()
+
+
+# Рисуем очки
+def glass():
+	# Передвигаем черепашку
+	t.up()
+	t.right(230)
+	t.forward(100)
+	t.left(90)
+	t.forward(20)
+	t.right(90)
+	t.down()
+
+	# Устанавливаем цвет
+	t.fillcolor(GLASS_COLOR)
+	t.begin_fill()
+
+	t.right(150)
+	t.circle(90, -55)
+
+	t.right(180)
+	t.forward(1)
+	t.right(180)
+	t.circle(10, -65)
+	t.right(180)
+	t.forward(110)
+	t.right(180)
+
+	t.circle(50, -190)
+	t.right(170)
+	t.forward(80)
+
+	t.right(180)
+	t.circle(45, -30)
+
+	t.end_fill()
+
+
+# Рисуем рюкзак
+def backpack():
+	t.up()
+	t.right(60)
+	t.forward(100)
+	t.right(90)
+	t.forward(75)
+
+	t.fillcolor(GLASS_COLOR)
+	t.begin_fill()
+
+	t.down()
+	t.forward(30)
+	t.right(255)
+
+	t.circle(300, -30)
+	t.right(260)
+	t.forward(30)
+	t.end_fill()
+
+
+# Вызываем все необходимые методы
+body()
+glass()
+backpack()
+
+turtle.done()
